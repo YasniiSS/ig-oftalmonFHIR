@@ -16,7 +16,7 @@ Description: "Perfil de procedimientos oftalmológicos"
 * performer 1..1 MS
 * reasonCode 0..* MS
 * bodySite 1..1 MS
-* bodySite.extension contains Lateralidad named lateralidad 1..1 MS
+* bodySite.extension contains http://hl7.org/fhir/StructureDefinition/bodySite named bodySiteRef 0..1 MS
 * outcome 0..1 MS
 * complication 0..* MS
 * report 0..* MS
@@ -51,9 +51,7 @@ Usage: #example
 * bodySite.coding.system = "http://snomed.info/sct"
 * bodySite.coding.code = #81745001
 * bodySite.coding.display = "Estructura del ojo"
-* bodySite.extension[lateralidad].valueCodeableConcept.coding.system = "http://snomed.info/sct"
-* bodySite.extension[lateralidad].valueCodeableConcept.coding.code = #24028007
-* bodySite.extension[lateralidad].valueCodeableConcept.coding.display = "Derecho"
+* bodySite.extension[bodySiteRef].valueReference = Reference(OjoIzquierdoEstructura)
 * outcome.coding.system = "http://snomed.info/sct"
 * outcome.coding.code = #385669000
 * outcome.coding.display = "Resultado exitoso"
@@ -99,9 +97,7 @@ Usage: #example
 * bodySite.coding.system = "http://snomed.info/sct"
 * bodySite.coding.code = #81745001
 * bodySite.coding.display = "Estructura del ojo"
-* bodySite.extension[lateralidad].valueCodeableConcept.coding.system = "http://snomed.info/sct"
-* bodySite.extension[lateralidad].valueCodeableConcept.coding.code = #7771000
-* bodySite.extension[lateralidad].valueCodeableConcept.coding.display = "Izquierdo"
+* bodySite.extension[http://hl7.org/fhir/StructureDefinition/bodySite].valueReference = Reference(OjoIzquierdoEstructura)
 * outcome.coding.system = "http://snomed.info/sct"
 * outcome.coding.code = #385669000
 * outcome.coding.display = "Resultado exitoso"

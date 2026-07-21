@@ -14,7 +14,6 @@ Description: "Perfil para registrar la administración de medicamentos en proced
 * dosage.route 1..1 MS
 * dosage.dose 1..1 MS
 * dosage.site 0..1 MS
-* dosage.site.extension contains Lateralidad named lateralidad 0..1 MS
 * note 0..* MS
 * supportingInformation 0..* MS
 
@@ -42,9 +41,6 @@ Usage: #example
 * dosage.site.coding.system = "http://snomed.info/sct"
 * dosage.site.coding.code = #81745001
 * dosage.site.coding.display = "Ojo"
-* dosage.site.extension[lateralidad].valueCodeableConcept.coding.system = "http://snomed.info/sct"
-* dosage.site.extension[lateralidad].valueCodeableConcept.coding.code = #7771000
-* dosage.site.extension[lateralidad].valueCodeableConcept.coding.display = "Izquierdo"
 * supportingInformation[0] = Reference(PlanInyeccionesAvastinEjemplo)
 * supportingInformation[0].display = "Plan de inyecciones intravítreas de Avastin"
 * note[0].text = "Dosis 1 de 3. Paciente tolera bien el procedimiento. Sin complicaciones inmediatas."
