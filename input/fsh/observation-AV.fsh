@@ -8,6 +8,7 @@ Description: "Perfil de observación para registro de agudeza visual alineado co
 * category 1..* MS
 * code 1..1 MS
 * code.coding 1..* MS
+* code from http://snomed.info/sct (preferred)
 * subject 1..1 MS
 * encounter 0..1 MS
 * effective[x] 0..1 MS
@@ -39,7 +40,7 @@ Usage: #example
 * subject.display = "Pato Donald"
 * encounter = Reference(EncuentroEjemplo)
 * effectiveDateTime = "2025-03-20T09:15:00-03:00"
-* performer[0].display = "Dr. Mickey Mouse"
+* performer[0].display = "TM. Elisa Silva"
 * method.coding.system = "http://snomed.info/sct"
 * method.coding.code = #400913005
 * method.coding.display = "Carta de Snellen"
@@ -66,7 +67,7 @@ Usage: #example
 * subject.display = "Pato Donald"
 * encounter = Reference(EncuentroEjemplo)
 * effectiveDateTime = "2025-03-20T09:20:00-03:00"
-* performer[0].display = "Dr. Mickey Mouse"
+* performer[0].display = "TM. Elisa Silva"
 * method.coding.system = "http://snomed.info/sct"
 * method.coding.code = #400913005
 * method.coding.display = "Carta de Snellen"
@@ -92,7 +93,7 @@ Usage: #example
 * subject.display = "Pato Donald"
 * encounter = Reference(EncuentroEjemplo)
 * effectiveDateTime = "2025-03-20T09:25:00-03:00"
-* performer[0].display = "Dr. Mickey Mouse"
+* performer[0].display = "TM. Elisa Silva"
 * method.coding.system = "http://snomed.info/sct"
 * method.coding.code = #400913005
 * method.coding.display = "Carta de Snellen"
@@ -119,7 +120,7 @@ Usage: #example
 * subject.display = "Pato Donald"
 * encounter = Reference(EncuentroEjemplo)
 * effectiveDateTime = "2025-03-20T09:30:00-03:00"
-* performer[0].display = "Dr. Mickey Mouse"
+* performer[0].display = "TM. Elisa Silva"
 * method.coding.system = "http://snomed.info/sct"
 * method.coding.code = #400913005
 * method.coding.display = "Carta de Snellen"
@@ -130,7 +131,7 @@ Usage: #example
 * bodySite.extension[bodySiteRef].valueReference = Reference(AmbosOjosEstructura)
 
 Instance: AVCuentaDedosOD
-InstanceOf: AgudezaVisualOftalmologia
+InstanceOf: AgudezaVisual
 Description: "Agudeza visual cuenta dedos ojo derecho"
 Usage: #example
 
@@ -145,7 +146,10 @@ Usage: #example
 * subject.display = "Pato Donald"
 * encounter = Reference(EncuentroEjemplo)
 * effectiveDateTime = "2025-03-20T09:35:00-03:00"
-* performer[0].display = "Dr. Mickey Mouse"
+* performer[0].display = "TM. Elisa Silva"
+* method.coding.system = "http://snomed.info/sct"
+* method.coding.code = #363983007
+* method.coding.display = "Agudeza Visual"
 * method.text = "Cuenta dedos"
 * valueCodeableConcept.coding.system = "http://snomed.info/sct"
 * valueCodeableConcept.coding.code = #260292001
